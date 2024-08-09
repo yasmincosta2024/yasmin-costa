@@ -1,12 +1,62 @@
-body { 
-    font-family: Arial, sans-serif;
-    text-aling: center;
-    background--image: url("aranha.j")
+* {
     margin: 0;
     padding: 0;
-    text-align: center;
 }
- h1 {
-    color:blanchedalmond;
 
+body {
+    width: 100%;
+    height: 100vh;
+    background: url(imagem1.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+main {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    background: rgba(red, green, blue, alpha);
+    backdrop-filter: blur(30px);
+    border: 2px solid#ffffff30;
+    width: 400px;
+    height: 550px;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 40px;
+    box-shadow: 0 0 10px black;
+}
+
+.title {
+    display: flex;/*É uma propriedade utilizada para organizar os elementos na pagina HTML*/
+    justify-content: center;/*É empregada para alinhar os elementos ao longo do eixo principal,cuja direçao (row ou column) e definida a partir da propriedade flex-direction.*/
+    align-items: center;/*É aplicada em conteineres flexiveis para controlar a posiçao vertical dos elementos filhos*/
+    width: 100%;/*Especifica largura de uma imagem, em pixels.*/
+    height: 50px;/*altura de uma imagem, em pixels*/
+    font: bold 1.5rem arial;/*É responsavel por definir a formaçao da fonte utilizada na sua pagina HTML*/
+
+    margin-bottom: 20px;/*define a margin area na parte inferior de um elemento*/
+}
+
+.input {
+    display: flex;
+    width: 300px;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input input {
+    width: 200px;
+    height: 50px;
+    border-radius: 15px;/* permite adicionar cantos arredondados a um elemento*/
+    border: none;
+    outline: 2px;/*remover a borda da caixa de texto*/
+    font: bold 1.5rem arial;
+    text-align: center;
+    background-color: transparent;/*configura o plano de fundo em uma cor/*
 }
