@@ -60,3 +60,60 @@ main {
     text-align: center;
     background-color: transparent;/*configura o plano de fundo em uma cor/*
 }
+
+.input label {
+    font: bold 1.5rem arial;
+}
+input::placeholder {
+    color: black;
+    font-style: italic;
+    font-size: 18px;
+}
+
+button {
+    width: 300px;
+    height: 40px;
+    font: bold 1.2rem arial;
+    background: black;
+    color: aqua;
+    outline: none;
+    border-radius: 55px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.result {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    width: 300px;
+    height: 150px;
+    border-radius: 55px;
+    font: italic 1.0rem arial;
+}
+
+button {
+    font: bold 1.2rem arial;
+    background: black;
+    color: rgb(255, 255, 255);
+    outline: none;
+    border-radius: 55px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.result {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    width: 300px;
+    height: 150px;
+    border-radius: 55px;
+    font: italic 1.0rem arial;
+    box-shadow: 0px 0px 10px rgb(rgb(175, 8, 94), rgb(0, 218, 76), rgb(0, 123, 255));
+    background-color: rgba(rgb(173, 93, 93), rgb(62, 142, 62), rgb(85, 85, 134), 0,08);
+    color: blueviolet;
+    padding: 10px;
+    box-sizing: border-box;
+    user-select: none;
+}
