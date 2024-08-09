@@ -1,17 +1,32 @@
-function calcularSoma() {
-    //Pega os numeros digitados nos campos de entrada 
-    var numeroA = parseFloat(document.getElementById('numeroA').Value);
-    var numeroB = parseFloat(document.getElementById('numeroB').value);
+const calcular = document.getElementById('calcular');
 
-    //verifica se os números são válidos (ou seja, se são números mesmo)
-    if (!isNaN(numeroA) && !isNaN(numeroB)) {
-        // realiza a soma dos numeros
-        var resultado = numeroA+numeroB;
+function imc () {
+    const nome = document.getElementById('nome').value;
+    const altura = document.getElementById('altura').value;
+    const peso = document.getElementById('peso').value;
+    const resultado = document.getElementById('resultado');
 
-        //exibe o resultado na página 
-        document.getElementById('resultado').innerHTML = "A soma de " + numeroA + " e " + numeroB + " é: " + resultado;
-    } else {
-        //se os numeros nao forem validos, pede para digitar numeros corretos
-        document.getElementById('resultado').innerHTML = "por favor, digite números válidos.";
+    if(nome!== '' && altura!=='' && peso !=="") {
+
+        const valorIMC =(peso / (altura * altura)).toFixed(1);
+        let classificacao = '';
+        if (valorIMC < 18.5) {
+            classificacao = 'abaixo do peso.';
+        }else if(valorIMC < 25) {
+            classificacao = 'com peso ideal, Parabéns!!!';
+        }else if(valorIMC < 30){
+            classificacao = 'levemente acima do peso.';
+        }else if (valorIMC < 35){
+            classificacao = 'com obesidade grau I.';
+        }else if (valorIMC < 40){
+            classificacao = 'com obesidade grau II.';
+        }else {
+            classificacao = 'com obesidade grau III. Cuidado!!';
+        }
+        resultado.textContent = `${nome} seu IMC é ${valorIMC} 
+         e você está ${classificacao}`;
+    }else {
+        resultado.textContent = 'Preencha todos os campos!!!';/*representa o conteudo de texto de um no e dos descententes*/
     }
 }
+calcular.addEventListener('click', imc);/*adiciona varios receptores de eventos especificos*/
